@@ -26,11 +26,11 @@ resource "aws_s3_bucket" "s3-terraform-state-storage" {
   force_destroy = true
 
   versioning {
-      enabled = false
+      enabled = true
     }
  
     lifecycle {
-      prevent_destroy = false
+      prevent_destroy = true
     }
  
     tags {
